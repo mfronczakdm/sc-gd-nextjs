@@ -69,13 +69,15 @@ export const size = {
  * @param {String} key key
  * @returns {String} string of custom properties
  */
+
+// @ts-ignore
 export function objToCssVar(obj, key) {
   return Object.entries(obj)
     .map((item) => `--${key}-${item[0]}: ${item[1]};`)
     .join('');
 }
 
-const baseStyles = css`
+css`
   :global() {
     /*
     Generated Custom Properties based on
