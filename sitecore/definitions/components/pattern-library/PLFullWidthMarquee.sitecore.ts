@@ -12,7 +12,7 @@ export default function (manifest: Manifest): void {
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: 'eyebrow', type: CommonFieldTypes.SingleLineText },
-      { name: 'heading', type: CommonFieldTypes.SingleLineText },
+      { name: 'heading', type: CommonFieldTypes.RichText },
       { name: 'portraitBackgroundImage', type: CommonFieldTypes.Image },
       { name: 'landscapeBackgroundImage', type: CommonFieldTypes.Image },
     ],

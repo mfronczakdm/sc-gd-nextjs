@@ -23,7 +23,7 @@ placeholders:
     - componentName: PLFullWidthMarquee
       fields:
         eyebrow: Bogus
-        heading: Marquee component
+        heading: <strike>$18.99*</strike> $2.99* .com
         landscapeBackgroundImage:
           src: /data/media/img/v2-domain-marq-us-non-cgi-landscape.jpg
           alt: Landscape Background

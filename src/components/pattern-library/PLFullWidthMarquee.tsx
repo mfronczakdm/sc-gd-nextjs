@@ -1,4 +1,4 @@
-import { Text, Field, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, ImageField, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { StyleguideComponentProps } from 'lib/component-props';
 import { Card, FullWidthMarqueeSection } from 'lib/style-components/PLFullWidthMarquee.styles';
 
@@ -32,7 +32,7 @@ const PLFullWidthMarquee = (props: PLFullWidthMarqueeProps): JSX.Element => {
           )}
           {heading && (
             <h2>
-              <Text field={heading} />
+              <RichText field={heading} />
             </h2>
           )}
         </Card>
