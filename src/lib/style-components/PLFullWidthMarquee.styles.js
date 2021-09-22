@@ -23,7 +23,7 @@ export const FullWidthMarqueeSection = styled.section`
   }
 
   @media ${orientationLandscape} {
-    text-align: ${({ textAlign }) => textAlign};
+    text-align: ${({ textAlign }) => textAlign || 'center'};
     flex-flow: row nowrap;
     background-image: ${({ landscapeBackgroundImage }) =>
   landscapeBackgroundImage ? `url(${landscapeBackgroundImage})` : 'initial'};
