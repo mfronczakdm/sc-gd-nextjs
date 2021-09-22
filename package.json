@@ -56,6 +56,11 @@
     "@graphql-codegen/typescript-operations": "^1.17.9",
     "@graphql-codegen/typescript-react-apollo": "^2.1.1",
     "@graphql-codegen/typescript-resolvers": "^1.17.10",
+    "@linaria/babel-preset": "^3.0.0-beta.13",
+    "@linaria/core": "^3.0.0-beta.13",
+    "@linaria/react": "^3.0.0-beta.13",
+    "@linaria/shaker": "^3.0.0-beta.13",
+    "@linaria/webpack-loader": "^3.0.0-beta.13",
     "@sitecore-jss/sitecore-jss-cli": "^16.0.0",
     "@sitecore-jss/sitecore-jss-dev-tools": "^16.0.0",
     "@sitecore-jss/sitecore-jss-manifest": "^16.0.0",
@@ -81,6 +86,7 @@
     "prettier": "^2.1.2",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2",
+    "webpack-bundle-analyzer": "^4.4.2",
     "yaml-loader": "^0.6.0"
   },
   "scripts": {
@@ -88,6 +94,7 @@
     "lint": "eslint ./src/**/*.tsx ./src/**/*.ts ./sitecore/definitions/**/*.ts ./scripts/**/*.ts ./data/**/*.yml",
     "bootstrap": "ts-node --project tsconfig.scripts.json scripts/bootstrap.ts && graphql-let",
     "build": "npm-run-all --serial bootstrap next:build",
+    "analyze": "ANALYZE=1 npm run build",
     "graphql:fetch-introspection": "ts-node --project tsconfig.scripts.json ./scripts/fetch-graphql-introspection-data.ts",
     "graphql:fetch-fragment-data": "ts-node --project tsconfig.scripts.json ./scripts/update-graphql-fragment-data.ts",
     "graphql:update": "npm-run-all --serial graphql:fetch-fragment-data graphql:fetch-introspection",

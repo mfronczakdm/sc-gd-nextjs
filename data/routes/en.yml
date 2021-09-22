@@ -20,6 +20,16 @@ fields:
 # root placeholder names are defined in the package.json config section (required for Sitecore deployment)
 placeholders:
   jss-main:
+    - componentName: pl-FullWidthMarquee
+      fields:
+        eyebrow: Bogus
+        heading: Marquee component
+        landscapeBackgroundImage:
+          src: /data/media/img/v2-domain-marq-us-non-cgi-landscape.jpg
+          alt: Landscape Background
+        portraitBackgroundImage:
+          src: /data/media/img/v2-domain-marq-us-non-cgi-portrait.jpg
+          alt: Portrait Background
     - componentName: ContentBlock
       fields:
         heading: Welcome to Sitecore JSS
