@@ -88,7 +88,6 @@ module.exports = function withLinaria(config = {}) {
         return config.webpack(webpackConfig, options);
       }
 
-      console.log('webpackConfig', webpackConfig)
       return webpackConfig;
     }
   };

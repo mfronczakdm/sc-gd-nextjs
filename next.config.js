@@ -10,8 +10,9 @@ const isDisconnected = process.env.JSS_MODE === JSS_MODE_DISCONNECTED;
 const publicUrl = process.env.PUBLIC_URL;
 
 const withLinaria = require('./next-with-linaria');
+const withBundleAnalyzer = require('./next-with-analyzer');
 
-const nextConfig = withLinaria({
+const nextConfig = {
 
   // Set assetPrefix to our public URL
   assetPrefix: publicUrl,
@@ -93,7 +94,7 @@ const nextConfig = withLinaria({
 
     return config;
   },
-})
+}
 
 const applyGraphQLCodeGenerationLoaders = (config, options) => {
   config.module.rules.push({
@@ -117,4 +118,4 @@ const applyGraphQLCodeGenerationLoaders = (config, options) => {
   return config;
 }
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(withLinaria(nextConfig));
