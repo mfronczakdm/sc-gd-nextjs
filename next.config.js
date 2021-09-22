@@ -9,11 +9,13 @@ const isDisconnected = process.env.JSS_MODE === JSS_MODE_DISCONNECTED;
 // This is set to http://localhost:3000 by default. See .env for more details.
 const publicUrl = process.env.PUBLIC_URL;
 
-const nextConfig = {
+const withLinaria = require('./next-with-linaria');
+
+const nextConfig = withLinaria({
 
   // Set assetPrefix to our public URL
   assetPrefix: publicUrl,
-  
+
   // Allow specifying a distinct distDir when concurrently running app in a container
   distDir: process.env.NEXTJS_DIST_DIR || '.next',
 
@@ -85,13 +87,13 @@ const nextConfig = {
       ];
     }
   },
-  
+
   webpack: (config, options) => {
     applyGraphQLCodeGenerationLoaders(config, options);
 
     return config;
   },
-}
+})
 
 const applyGraphQLCodeGenerationLoaders = (config, options) => {
   config.module.rules.push({
