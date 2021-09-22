@@ -17,12 +17,12 @@ export const FullWidthMarqueeSection = styled.section`
   portraitBackgroundImage ? `url(${portraitBackgroundImage})` : 'initial'}
     center/cover no-repeat;
 
-  @media ${orientationLandscape} {
+  @media ${orientationPortrait} {
     flex-flow: column nowrap;
     text-align: center;
   }
 
-  @media ${orientationPortrait} {
+  @media ${orientationLandscape} {
     text-align: ${({ textAlign }) => textAlign};
     flex-flow: row nowrap;
     background-image: ${({ landscapeBackgroundImage }) =>
