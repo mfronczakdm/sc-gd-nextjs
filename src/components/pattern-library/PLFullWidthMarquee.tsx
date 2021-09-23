@@ -19,8 +19,8 @@ const PLFullWidthMarquee = (props: PLFullWidthMarqueeProps): JSX.Element => {
     props.fields || {};
 
   const bgProps = {
-    landscapeBackgroundImage: landscapeBackgroundImage.value?.src,
-    portraitBackgroundImage: portraitBackgroundImage.value?.src,
+    landscapeBackgroundImage: landscapeBackgroundImage?.value?.src,
+    portraitBackgroundImage: portraitBackgroundImage?.value?.src,
   };
 
   return (

@@ -19,7 +19,7 @@ function PLColumnItem(props: PLColumnItemProps): JSX.Element {
       {<Image className={cardImg} field={image} />}
       {/*{(image && <Image className={cardImg} field={image} />) || <div className={cardImg} />}*/}
       <h3>
-        { title.value }
+        { title?.value }
         {/*<Text field={title} />*/}
       </h3>
       <RichText field={content} />
