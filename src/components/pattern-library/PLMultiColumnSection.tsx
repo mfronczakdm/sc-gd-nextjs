@@ -15,7 +15,7 @@ type PLMultiColumnSectionProps = StyleguideComponentProps & {
 
 const Fallback = styled.div`
   min-height: 100px;
-  background-color: pink;
+  border: 1px solid gray;
 `;
 
 const renderCard = (cardProps: PLColumnItemProps): JSX.Element => {
