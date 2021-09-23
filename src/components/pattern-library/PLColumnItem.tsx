@@ -11,6 +11,7 @@ export type PLColumnItemProps = StyleguideComponentProps & {
 };
 
 function PLColumnItem(props: PLColumnItemProps): JSX.Element {
+  console.log('PLColumnItem', props);
   const { title, content, image } = props.fields;
 
   return (

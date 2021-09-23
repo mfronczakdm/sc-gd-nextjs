@@ -14,7 +14,9 @@ type PLFullWidthMarqueeProps = StyleguideComponentProps & {
 };
 
 const PLFullWidthMarquee = (props: PLFullWidthMarqueeProps): JSX.Element => {
-  const { landscapeBackgroundImage, portraitBackgroundImage, heading, eyebrow } = props.fields;
+  console.log('PLFullWidthMarquee', props);
+  const { landscapeBackgroundImage, portraitBackgroundImage, heading, eyebrow } =
+    props.fields || {};
 
   const bgProps = {
     landscapeBackgroundImage: landscapeBackgroundImage.value?.src,
@@ -37,7 +39,6 @@ const PLFullWidthMarquee = (props: PLFullWidthMarqueeProps): JSX.Element => {
           )}
         </Card>
       </FullWidthMarqueeSection>
-      <code>{JSON.stringify(props)}</code>
     </>
   );
 };

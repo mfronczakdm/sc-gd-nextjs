@@ -17,9 +17,10 @@ const renderCard = (cardProps: PLColumnItemProps): JSX.Element => {
 };
 
 function PLMultiColumnSection(props: PLMultiColumnSectionProps): JSX.Element {
-  const { heading, body, columnItems } = props.fields;
+  console.log('PLMultiColumnSection', props);
+  const { heading, body, columnItems = [] } = props.fields || {};
 
-  const columns = columnItems.length === 2 ? 2 : 3;
+  const columns = columnItems.length <= 2 ? columnItems.length : 3;
 
   return (
     <div>
@@ -28,8 +29,6 @@ function PLMultiColumnSection(props: PLMultiColumnSectionProps): JSX.Element {
       </h2>
       <RichText field={body} />
       <MultiColumnGrid {...{ columns }}>{columnItems.map(renderCard)}</MultiColumnGrid>
-
-      <code>{JSON.stringify(props)}</code>
     </div>
   );
 }
