@@ -30,7 +30,7 @@ const componentFactoryPath = path.resolve('src/temp/componentFactory.ts');
 const componentRootPath = 'src/components';
 
 // Matches TypeScript files that are not type definition files
-const fileFormat = new RegExp(/(.+)(?<!\.d)\.tsx?$/);
+const fileFormat = new RegExp(/(.+)(?<!\.d)\.[tj]sx?$/);
 
 const isWatch = process.argv.some((arg) => arg === '--watch');
 (isWatch ? watchComponentFactory : writeComponentFactory)();

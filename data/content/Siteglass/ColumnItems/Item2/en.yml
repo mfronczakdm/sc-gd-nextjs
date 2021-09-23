@@ -1,0 +1,9 @@
+id: siteglass-column-item-shared-2
+displayName: Siteglass Column Card 2 (Shared)
+template: PLColumnItem
+fields:
+  title: Enormous selection
+  content: Details here
+  image:
+    src: /data/media/img/2-icon-get-the-domain-you-want-b-235x.png
+    alt: A picture

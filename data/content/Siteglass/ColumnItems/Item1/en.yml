@@ -1,0 +1,9 @@
+id: siteglass-column-item-shared-1
+displayName: Siteglass Column Card 1 (Shared)
+template: PLColumnItem
+fields:
+  title: World's largest registrar
+  content: Details here
+  image:
+    src: /data/media/img/jbr_err_pid14140.png
+    alt: A picture

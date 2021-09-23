@@ -1,0 +1,9 @@
+id: siteglass-column-item-shared-4
+displayName: Siteglass Column Card 4 (Shared)
+template: PLColumnItem
+fields:
+  title: Extra special
+  content: Details here
+  image:
+    src: /data/media/img/icon-domain-award-winning-support-235x.png
+    alt: A picture

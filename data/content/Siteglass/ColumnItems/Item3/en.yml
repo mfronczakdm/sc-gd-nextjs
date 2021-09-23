@@ -1,0 +1,6 @@
+id: siteglass-column-item-shared-3
+displayName: Siteglass Column Card 3 (Shared)
+template: PLColumnItem
+fields:
+  title: Award-winning support
+  content: Details here
