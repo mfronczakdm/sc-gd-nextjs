@@ -1,4 +1,4 @@
-import { Text, Field, RichText, Image, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, RichText, Image, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { StyleguideComponentProps } from 'lib/component-props';
 import { cardImg, MultiColumnItem } from 'lib//style-components/PLColumnItem.styles';
 
