@@ -3,6 +3,7 @@ import { StyleguideComponentProps } from 'lib/component-props';
 import PLColumnItem, { PLColumnItemProps } from 'components/pattern-library/PLColumnItem';
 // @ts-ignore
 import { MultiColumnGrid } from 'lib/style-components/PLMultiColumnSection.styles';
+import { styled } from '@linaria/react';
 
 type PLMultiColumnSectionProps = StyleguideComponentProps & {
   fields: {
@@ -11,6 +12,11 @@ type PLMultiColumnSectionProps = StyleguideComponentProps & {
     columnItems: PLColumnItemProps[]; // does this need to be Item[] ?
   };
 };
+
+const Fallback = styled.div`
+  min-height: 100px;
+  background-color: pink;
+`;
 
 const renderCard = (cardProps: PLColumnItemProps): JSX.Element => {
   return <PLColumnItem {...cardProps} />;
@@ -23,13 +29,13 @@ function PLMultiColumnSection(props: PLMultiColumnSectionProps): JSX.Element {
   const columns = columnItems.length <= 2 ? columnItems.length : 3;
 
   return (
-    <div>
+    <Fallback>
       <h2>
         <Text field={heading} />
       </h2>
       <RichText field={body} />
       <MultiColumnGrid {...{ columns }}>{columnItems.map(renderCard)}</MultiColumnGrid>
-    </div>
+    </Fallback>
   );
 }
 
